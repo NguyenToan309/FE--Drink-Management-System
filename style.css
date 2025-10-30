@@ -1,0 +1,25 @@
+:root {
+  --main-color: #A3C9A8; /* xanh matcha */
+  --text-color: #000000;
+}
+
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+header { background: var(--main-color); color: var(--text-color); padding: 10px; text-align: center; }
+nav { margin-top: 10px; }
+nav button { margin: 5px; padding: 8px 12px; cursor: pointer; border: none; border-radius: 5px; color: black; }
+nav button.active { background: #ffffff; color: #000000; }
+.content { display: none; padding: 20px; }
+.content.active { display: block; }
+#searchBox { width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ffffff; border-radius: 5px; }
+#categoryMenu { margin-bottom: 15px; }
+#categoryMenu button { margin: 3px; padding: 6px 10px; border-radius: 5px; border: 1px solid #ffffff; background: #eee; cursor: pointer; }
+#categoryMenu button:hover { background: var(--main-color); color: #fff; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+.card { border: 1px solid #ddd; padding: 10px; border-radius: 8px; background: #fff; text-align: center; }
+.card img { width: 100%; height: 150px; object-fit: cover; border-radius: 6px; }
+button { background: #B5CDA3; color: var(--text-color); border: none; border-radius: 5px; padding: 6px 10px; }
+button:hover { opacity: 0.9; }
+select, input { margin: 5px 0; padding: 6px; width: 100%; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; background: #ffffff; }
+th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+footer { text-align: center; padding: 10px; background: #eee; margin-top: 20px; }
