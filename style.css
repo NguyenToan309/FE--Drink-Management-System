@@ -1,25 +1,125 @@
-:root {
-  --main-color: #A3C9A8; /* xanh matcha */
-  --text-color: #000000;
+body, html {
+  margin: 0; padding: 0; font-family: Arial, sans-serif; background: white;
+  color: #212529;
+}
+.page-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+h1 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+.form label {
+  margin: 10px 0 6px;
+  font-weight: 600;
+}
+.form input, .form textarea {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.form button {
+  margin-top: 20px;
+  padding: 12px;
+  font-weight: 600;
+  background: #0d6efd;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.form button:hover {
+  background: #084298;
+}
+.link {
+  margin-top: 15px;
+  text-align: center;
 }
 
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
-header { background: var(--main-color); color: var(--text-color); padding: 10px; text-align: center; }
-nav { margin-top: 10px; }
-nav button { margin: 5px; padding: 8px 12px; cursor: pointer; border: none; border-radius: 5px; color: black; }
-nav button.active { background: #ffffff; color: #000000; }
-.content { display: none; padding: 20px; }
-.content.active { display: block; }
-#searchBox { width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ffffff; border-radius: 5px; }
-#categoryMenu { margin-bottom: 15px; }
-#categoryMenu button { margin: 3px; padding: 6px 10px; border-radius: 5px; border: 1px solid #ffffff; background: #eee; cursor: pointer; }
-#categoryMenu button:hover { background: var(--main-color); color: #fff; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-.card { border: 1px solid #ddd; padding: 10px; border-radius: 8px; background: #fff; text-align: center; }
-.card img { width: 100%; height: 150px; object-fit: cover; border-radius: 6px; }
-button { background: #B5CDA3; color: var(--text-color); border: none; border-radius: 5px; padding: 6px 10px; }
-button:hover { opacity: 0.9; }
-select, input { margin: 5px 0; padding: 6px; width: 100%; }
-table { width: 100%; border-collapse: collapse; margin-top: 10px; background: #ffffff; }
-th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
-footer { text-align: center; padding: 10px; background: #eee; margin-top: 20px; }
+.table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  border: 1px solid #dee2e6;
+}
+.table th, .table td {
+  border: 1px solid #dee2e6;
+  padding: 12px;
+  text-align: left;
+  font-size: 15px;
+}
+.table th {
+  background: #f8f9fa;
+  font-weight: 700;
+}
+
+.btn-primary {
+  padding: 8px 16px;
+  background-color: #0d6efd;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.btn-primary:hover {
+  background-color: #084298;
+}
+
+.btn-secondary {
+  padding: 8px 16px;
+  background-color: #6c757d;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background-color: #565e64;
+}
+
+.btn-group {
+  margin-bottom: 15px;
+}
+
+/* Nút thao tác bảng */
+.action-btn {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 8px;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.2s;
+}
+.action-btn.edit-btn:hover {
+  background-color: #e7f1ff;
+  border-color: #0d6efd;
+  color: #0d6efd;
+}
+.action-btn.delete-btn:hover {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.error-message {
+  color: #dc3545;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+}
