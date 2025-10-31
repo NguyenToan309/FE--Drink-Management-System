@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Nhân viên</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <h2 class="logo">OPERATIONAL UI</h2>
+            <nav class="main-nav">
+                <a href="staff_dashboard.html" class="nav-item active">📋 Đơn hàng</a>
+                </nav>
+            <a href="login.html" class="logout-link">🔓 Đăng xuất</a>
+        </aside>
+        
+        <main class="content">
+            <header class="content-header">
+                <h1>Quản lý Đơn hàng</h1>
+            </header>
+            
+            <section class="data-section">
+                <h3>Danh sách Đơn hàng</h3>
+                <table class="data-table" id="order-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Khách hàng</th>
+                            <th>Thời gian</th>
+                            <th>Trạng thái</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-order-id="1001" data-status="pending">
+                            <td>#1001</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>17:30 26/10</td>
+                            <td><span class="status status-pending">Chờ Xác nhận</span></td>
+                            <td>
+                                <button class="btn btn-small btn-confirm">Xác nhận</button>
+                                <button class="btn btn-small btn-complete" style="display:none;">Hoàn thành</button>
+                            </td>
+                        </tr>
+                        <tr data-order-id="1002" data-status="confirmed">
+                            <td>#1002</td>
+                            <td>Lê Thị B</td>
+                            <td>17:20 26/10</td>
+                            <td><span class="status status-confirmed">Đã Xác nhận</span></td>
+                            <td>
+                                <button class="btn btn-small btn-confirm" style="display:none;">Xác nhận</button>
+                                <button class="btn btn-small btn-complete">Hoàn thành</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

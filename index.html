@@ -1,75 +1,14 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Trà Sữa</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=pages/login.html">
+    <title>Đang tải...</title>
 </head>
 <body>
-  <header>
-    <h1> Trà Sữa🧋</h1>
-    <nav>
-      <button class="tab active" data-target="home">Trang chủ</button>
-      <button class="tab" data-target="cart">Giỏ hàng</button>
-      <button class="tab" data-target="checkout">Thanh toán</button>
-      <button class="tab" data-target="orders">Lịch sử đơn hàng</button>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Trang chủ -->
-    <section id="home" class="content active">
-      <h2>Menu sản phẩm</h2>
-      <input type="text" id="searchBox" placeholder="🔍 Tìm sản phẩm..." oninput="searchProducts()">
-      <div id="categoryMenu">
-        <button onclick="filterCategory('all')">Tất cả</button>
-        <button onclick="filterCategory('Thuần Trà')">Thuần Trà</button>
-        <button onclick="filterCategory('Trà Sữa')">Trà Sữa</button>
-        <button onclick="filterCategory('Trà Latte')">Trà Latte</button>
-        <button onclick="filterCategory('Trà Trái Cây')">Trà Trái Cây</button>
-        <button onclick="filterCategory('Hot')">Hot</button>
-        <button onclick="filterCategory('Mới')">Mới</button>
-      </div>
-      <div id="productList"></div>
-    </section>
-
-    <!-- Giỏ hàng -->
-    <section id="cart" class="content">
-      <h2>Giỏ hàng</h2>
-      <div id="cartTableWrap"></div>
-      <div style="margin-top:15px; text-align:right;">
-        <button id="goCheckoutBtn">Thanh toán</button>
-      </div>
-    </section>
-
-    <!-- Thanh toán -->
-    <section id="checkout" class="content">
-      <h2>Thanh toán</h2>
-      <form id="checkoutForm">
-        <input name="name" placeholder="Họ và tên" required>
-        <input name="phone" placeholder="Số điện thoại" required>
-        <input name="address" placeholder="Địa chỉ" required>
-        <select name="payment" required>
-          <option value="cod">Thanh toán khi nhận hàng</option>
-          <option value="momo">Ví MoMo</option>
-          <option value="bank">Chuyển khoản</option>
-        </select>
-        <button type="submit">Đặt hàng</button>
-      </form>
-      <p>Tổng đơn: <span id="checkoutTotal">0₫</span></p>
-    </section>
-
-    <!-- Lịch sử đơn hàng -->
-    <section id="orders" class="content">
-      <h2>Lịch sử đơn hàng</h2>
-      <div id="orderList"></div>
-    </section>
-  </main>
-
-  <footer>
-    © 2025 Trà Sữa
-  </footer>
-
-  <script src="script.js"></script>
+    <p>Đang chuyển hướng đến trang Đăng nhập...</p>
+    <script>
+        window.location.href = "pages/login.html";
+    </script>
 </body>
 </html>

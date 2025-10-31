@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập Vận hành</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <h1>Đăng Nhập Hệ thống Vận hành</h1>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Tên người dùng/Email:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+            <p id="login-error" class="error-message"></p>
+        </form>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

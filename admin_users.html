@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Quản lý Tài khoản</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <h2 class="logo">ADMIN UI</h2>
+            <nav class="main-nav">
+                <a href="admin_users.html" class="nav-item active">⚙️ Quản lý Tài khoản</a>
+            </nav>
+            <a href="login.html" class="logout-link">🔓 Đăng xuất</a>
+        </aside>
+        
+        <main class="content">
+            <header class="content-header">
+                <h1>Quản lý Tài khoản Người dùng</h1>
+                <button id="add-user-btn-admin" class="btn btn-primary">➕ Tạo Tài khoản Mới</button>
+            </header>
+
+            <div id="admin-user-form-container" class="form-card" style="display:none;">
+                <h3>Tạo Tài khoản (Staff/Manager)</h3>
+                <form id="admin-user-form">
+                    <div class="form-group">
+                        <label for="admin-full-name">Họ và Tên:</label>
+                        <input type="text" id="admin-full-name" name="full-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-username">Tên đăng nhập:</label>
+                        <input type="text" id="admin-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-password">Mật khẩu:</label>
+                        <input type="password" id="admin-password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-role">Vai trò:</label>
+                        <select id="admin-role" name="role" required>
+                            <option value="Staff">Nhân viên (Staff)</option>
+                            <option value="Manager">Quản lý (Manager)</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-success">Tạo Tài khoản</button>
+                        <button type="button" class="btn btn-secondary btn-cancel">Hủy</button>
+                    </div>
+                </form>
+            </div>
+
+            <section class="data-section">
+                <table class="data-table" id="admin-user-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Họ và Tên</th>
+                            <th>Tên đăng nhập</th>
+                            <th>Vai trò</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-id="U001">
+                            <td>U001</td>
+                            <td>Trần Văn C</td>
+                            <td>c.tran</td>
+                            <td>Manager</td>
+                            <td><button class="btn btn-small btn-delete">Xóa</button></td>
+                        </tr>
+                        <tr data-id="A001">
+                            <td>A001</td>
+                            <td>Admin Tối cao</td>
+                            <td>admin</td>
+                            <td>Admin</td>
+                            <td><button class="btn btn-small btn-delete" disabled>Xóa (Admin)</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

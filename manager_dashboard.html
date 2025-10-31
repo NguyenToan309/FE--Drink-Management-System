@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Quản lý</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <h2 class="logo">OPERATIONAL UI</h2>
+            <nav class="main-nav">
+                <a href="manager_dashboard.html" class="nav-item active">📋 Quản lý Đơn hàng</a>
+                <a href="manager_products.html" class="nav-item">📦 Quản lý Sản phẩm</a>
+                <a href="manager_users.html" class="nav-item">👤 Quản lý Nhân viên</a>
+            </nav>
+            <a href="login.html" class="logout-link">🔓 Đăng xuất</a>
+        </aside>
+        
+        <main class="content">
+            <header class="content-header">
+                <h1>Quản lý Đơn hàng (Quản lý)</h1>
+            </header>
+            
+            <section class="data-section">
+                <h3>Danh sách Đơn hàng</h3>
+                <table class="data-table" id="order-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Khách hàng</th>
+                            <th>Thời gian</th>
+                            <th>Trạng thái</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-order-id="1001" data-status="pending">
+                            <td>#1001</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>17:30 26/10</td>
+                            <td><span class="status status-pending">Chờ Xác nhận</span></td>
+                            <td><button class="btn btn-small btn-confirm">Xác nhận</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

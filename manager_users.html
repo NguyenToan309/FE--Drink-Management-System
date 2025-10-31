@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Nhân viên</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <h2 class="logo">OPERATIONAL UI</h2>
+            <nav class="main-nav">
+                <a href="manager_dashboard.html" class="nav-item">📋 Quản lý Đơn hàng</a>
+                <a href="manager_products.html" class="nav-item">📦 Quản lý Sản phẩm</a>
+                <a href="manager_users.html" class="nav-item active">👤 Quản lý Nhân viên</a>
+            </nav>
+            <a href="login.html" class="logout-link">🔓 Đăng xuất</a>
+        </aside>
+        
+        <main class="content">
+            <header class="content-header">
+                <h1>Quản lý Nhân viên</h1>
+                <button id="add-user-btn" class="btn btn-primary">➕ Thêm Nhân viên</button>
+            </header>
+
+            <div id="user-form-container" class="form-card" style="display:none;">
+                <h3>Thêm Nhân viên Mới</h3>
+                <form id="user-form">
+                    <div class="form-group">
+                        <label for="full-name">Họ và Tên:</label>
+                        <input type="text" id="full-name" name="full-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Vai trò:</label>
+                        <select id="role" name="role" required>
+                            <option value="Staff">Nhân viên</option>
+                            <option value="Manager">Quản lý</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-success">Lưu</button>
+                        <button type="button" class="btn btn-secondary btn-cancel">Hủy</button>
+                    </div>
+                </form>
+            </div>
+
+            <section class="data-section">
+                <table class="data-table" id="user-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Họ và Tên</th>
+                            <th>Email</th>
+                            <th>Vai trò</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-id="U001">
+                            <td>U001</td>
+                            <td>Trần Văn C</td>
+                            <td>c.tran@store.com</td>
+                            <td>Quản lý</td>
+                            <td>
+                                <button class="btn btn-small btn-edit">Sửa</button>
+                                <button class="btn btn-small btn-delete">Xóa</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>
