@@ -44,42 +44,51 @@ function renderProducts(listData = products) {
           <h4>${p.name}</h4>
           <p>${p.price.toLocaleString()}₫</p>
 
-          <label>Size:</label>
-          <select id="size-${p.id}">
-            <option value="M">M</option>
-            <option value="L">L (+5k)</option>
-          </select>
-
-          <label>Đường:</label>
-          <select id="sugar-${p.id}">
-            <option value="100%">100%</option>
-            <option value="70%">70%</option>
-            <option value="50%">50%</option>
-            <option value="30%">30%</option>
-          </select>
-
-          <label>Đá:</label>
-          <select id="ice-${p.id}">
-            <option value="100%">100%</option>
-            <option value="70%">70%</option>
-            <option value="30%">30%</option>
-            <option value="0%">Không đá</option>
-          </select>
-
-          <label>Topping:</label>
-          <select id="topping-${p.id}">
-            <option value="Không">Không</option>
-            <option value="Trân châu đen">Trân châu đen (+5k)</option>
-            <option value="Thạch phô mai">Thạch phô mai (+7k)</option>
-          </select>
-
-          <button onclick="addToCart(${p.id})">Thêm vào giỏ</button>
+          <button onclick="showOptions(${p.id})">Mua ngay</button>
         </div>
       `).join("")}
     </div>
   `;
 }
-
+function showOptions(id) {
+  const p = products.find(x => x.id === id);
+  const container = document.getElementById("productList");
+  container.innerHTML = `
+    <div class="optionBox">
+      <h3>${p.name}</h3>
+      <img src="${p.image}" alt="${p.name}" style="max-width:200px">
+      <p>Giá gốc: ${p.price.toLocaleString()}₫</p>
+      <label>Size:</label>
+      <select id="size-${id}">
+        <option value="M">M</option>
+        <option value="L">L (+5k)</option>
+      </select>
+      <label>Đường:</label>
+      <select id="sugar-${id}">
+        <option value="100%">100%</option>
+        <option value="70%">70%</option>
+        <option value="50%">50%</option>
+        <option value="30%">30%</option>
+      </select>
+      <label>Đá:</label>
+      <select id="ice-${id}">
+        <option value="100%">100%</option>
+        <option value="70%">70%</option>
+        <option value="30%">30%</option>
+        <option value="0%">Không đá</option>
+      </select>
+      <label>Topping:</label>
+      <select id="topping-${id}">
+        <option value="Không">Không</option>
+        <option value="Trân châu đen">Trân châu đen (+5k)</option>
+        <option value="Thạch phô mai">Thạch phô mai (+7k)</option>
+      </select>
+      <br><br>
+      <button onclick="addToCart(${id})">Thêm vào giỏ</button>
+      <button onclick="renderProducts()">Quay lại</button>
+    </div>
+  `;
+}
 // ===== LỌC DANH MỤC =====
 function filterCategory(cat) {
   if (cat === 'all') renderProducts(products);
