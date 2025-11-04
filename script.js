@@ -237,6 +237,7 @@ function addToCart(id) {
 
   localStorage.setItem("cart", JSON.stringify(cart));
   renderCart();
+  showCartAlert(p.name); 
 }
 
 // ===== RENDER GIỎ HÀNG =====
@@ -371,10 +372,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const logoutBtn = document.getElementById("logoutBtn");
   if (logoutBtn) {
     logoutBtn.addEventListener("click", function () {
+      cart = []; // Xóa giỏ hàng
+      localStorage.removeItem("cart"); // Xóa dữ liệu lưu
+      renderCart(); // Cập nhật lại giao diện giỏ
       alert("Bạn đã đăng xuất!");
-      // window.location.href = "login.html"; // nếu có trang đăng nhập
     });
   }
 });
+function showCartAlert(name) {
+  const alertBox = document.getElementById("cartAlert");
+  alertBox.innerText = `Đã thêm ${name} vào giỏ hàng!`;
+  alertBox.classList.add("show");
+  setTimeout(() => {
+    alertBox.classList.remove("show");
+  }, 2000);
+}
 // ===== KHỞI ĐỘNG =====
 renderAll();
