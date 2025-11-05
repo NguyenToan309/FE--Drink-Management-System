@@ -1,5 +1,5 @@
 :root {
-  --main-color: #A3C9A8; /* xanh matcha */
+  --main-color: #A3C9A8; 
   --text-color: #000000;
 }
 
@@ -85,7 +85,7 @@ header {
 .contact-banner {
   background: #B5CDA3;
   color: rgb(0, 0, 0);
-  padding: 50px;
+  padding: 30px 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -99,13 +99,28 @@ header {
   text-align: center;
 }
 
-.contact-banner .contact-info {
-  flex: 2;
+
+.contact-banner .logo img {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+.contact-banner .contact-info { 
+  flex: 2; 
   min-width: 300px;
   padding: 0 20px;
-}
 
-.contact-banner .contact-info a {
-  color: #000000;
-  text-decoration: underline;
+}
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 6px;
+  text-align: left;
+
+}
+.logo img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
 }
